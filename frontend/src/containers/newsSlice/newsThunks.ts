@@ -22,9 +22,9 @@ export const getAllNews = createAsyncThunk<GetNews[]>(
   }
 );
 
-export const deleteOneNews = createAsyncThunk<void, string>(
+export const deleteOneNews = createAsyncThunk<void, number>(
   'news/deleteOneNews',
-  async (id) => {
-    await axiosApi.delete(`/dishes/${id}`);
+  async (id: number) => {
+    await axiosApi.delete(`/news/${id}`);
   }
 );

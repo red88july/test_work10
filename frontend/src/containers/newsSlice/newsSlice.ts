@@ -30,7 +30,6 @@ export const newsSlice = createSlice({
       state.isGetNewsLoading = false;
     });
 
-
     builder.addCase(deleteOneNews.pending, (state) => {
       state.deleteOneNews = true;
     });
@@ -45,3 +44,4 @@ export const newsSlice = createSlice({
 
 export const newsReducer = newsSlice.reducer;
 export const allNews = (state: RootState) => state.news.news;
+export const deleteNews = (state: RootState) => state.news.deleteOneNews;
