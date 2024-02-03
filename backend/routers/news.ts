@@ -86,7 +86,7 @@ newsRouter.delete('/:id', async (req, res, next) => {
             [req.params.id]) as RowDataPacket[];
 
         if (result) {
-            res.status(200).send({success: "Resource on items table was been deleted!"});
+            res.status(200).send({success: "Resource on news table was been deleted!"});
         }
 
     } catch (e) {
